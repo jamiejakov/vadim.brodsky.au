@@ -1,4 +1,4 @@
-# vadim.brodsky.lv
+# vadim.brodsky.au
 My personal Resume site
 
-please visit at http://vadim.brodsky.lv
+please visit at http://vadim.brodsky.au
