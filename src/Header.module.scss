@@ -1,0 +1,57 @@
+@use '../style/variables.scss';
+@use '../style/breakpoints.scss';
+
+.header {
+  width: 100%;
+  background-color: variables.$primaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: variables.$baseUnit * 4;
+  margin-bottom: variables.$baseUnit * 2;
+  padding: variables.$baseUnit * 4 variables.$baseUnit * 2 variables.$baseUnit * 6;
+
+  -webkit-clip-path: polygon(0 -600px, 100% -600px, 100% calc(100% - 30px), 0 100%);
+  clip-path: polygon(0 -600px, 100% -600px, 100% calc(100% - 30px), 0 100%);
+
+  @include breakpoints.for-tablet-portrait-down {
+    gap: variables.$baseUnit;
+    padding-bottom: variables.$baseUnit * 8;
+  }
+}
+
+.avatarContainer {
+  .avatarImage {
+    max-width: variables.$baseUnit * 20;
+    border: 2px solid #fff;
+    border-radius: 100%;
+  }
+}
+
+.titleContainer {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .title {
+    font-weight: bold;
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: -0.1rem;
+    font-weight: 700;
+    text-align: center;
+
+    @include breakpoints.for-tablet-portrait-down {
+      font-size: 3rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+  }
+}

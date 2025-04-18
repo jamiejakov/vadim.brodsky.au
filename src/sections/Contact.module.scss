@@ -1,0 +1,17 @@
+@use '../../style/variables.scss';
+
+.list {
+  padding-left: 0;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: variables.$baseUnit;
+  margin-bottom: variables.$baseUnit;
+}
+
+.icon {
+  max-width: variables.$baseUnit * 1.5;
+}

@@ -1,0 +1,52 @@
+/**
+* Breakpoints for different screen sizes.
+* Based on this article: https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/ 
+*/
+
+$forPhoneOnlyMaxWidth: 599px;
+$forTabletPortraitMaxWidth: 899px;
+$forTabletLandscapeMaxWidth: 1199px;
+$forDesktopMaxWidth: 1799px;
+$forBigDesktopMinWidth: 1800px;
+
+// Needs to be kept in sync with helpers/breakpoints.ts
+// At the moment there is a clean way to import this from JS
+$forPhoneOnly: '(max-width: #{$forPhoneOnlyMaxWidth})';
+$forTabletPortraitDown: '(max-width: #{$forTabletPortraitMaxWidth})';
+$forTabletLandscapeDown: '(max-width: #{$forTabletLandscapeMaxWidth})';
+$forDesktopDown: '(max-width: #{$forDesktopMaxWidth})';
+$forBigDesktopUp: '(min-width: #{$forBigDesktopMinWidth})';
+
+/********** Phone **********/
+@mixin for-phone-only {
+  @media #{$forPhoneOnly} {
+    @content;
+  }
+}
+
+/********** Tablet **********/
+@mixin for-tablet-portrait-down {
+  @media #{$forTabletPortraitDown} {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-down {
+  @media #{$forTabletLandscapeDown} {
+    @content;
+  }
+}
+
+/********* Desktop *********/
+@mixin for-desktop-down {
+  @media #{$forDesktopDown} {
+    @content;
+  }
+}
+
+/********* Big Desktop *********/
+@mixin for-big-desktop-up {
+  @media #{$forBigDesktopUp} {
+    @content;
+  }
+}

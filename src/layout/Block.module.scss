@@ -1,0 +1,25 @@
+@use '../../style/variables.scss';
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-weight: 300;
+  font-size: 20px;
+
+  .mainTitle {
+    font-weight: 600;
+  }
+}
+
+.dates {
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-weight: 300;
+  color: #817f7f;
+  font-style: italic;
+  font-size: 17px;
+}
+
+.content {
+  margin-top: variables.$baseUnit;
+}
