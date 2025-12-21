@@ -6,7 +6,6 @@ import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactX from 'eslint-plugin-react-x';
 import reactDom from 'eslint-plugin-react-dom';
-import jest from 'eslint-plugin-jest';
 import prettier from 'eslint-plugin-prettier';
 import pluginImport from 'eslint-plugin-import';
 import unusedImports from 'eslint-plugin-unused-imports';
@@ -57,12 +56,10 @@ export default tseslint.config(
       js.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
-      jest.configs['flat/recommended'],
-      jest.configs['flat/style'],
     ],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: { ...globals.browser, ...globals.node, ...globals.jest },
+      globals: { ...globals.browser, ...globals.node },
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
@@ -78,7 +75,6 @@ export default tseslint.config(
       'react-x': reactX,
       'react-dom': reactDom,
       react,
-      jest,
       prettier,
       import: pluginImport,
       'unused-imports': unusedImports,
@@ -115,10 +111,6 @@ export default tseslint.config(
       '@typescript-eslint/no-unnecessary-condition': 'warn',
       '@typescript-eslint/unbound-method': 'off',
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-
-      'jest/require-top-level-describe': 'warn',
-      'jest/prefer-to-have-length': 'warn',
-      'jest/prefer-todo': 'warn',
 
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
