@@ -1,20 +1,21 @@
 @use '../../style/variables.scss';
 
+
 .title {
   text-transform: uppercase;
   letter-spacing: 0px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 20px;
 
   .mainTitle {
     font-weight: 600;
+    font-size: 24px;
   }
 }
 
 .dates {
-  text-transform: uppercase;
   letter-spacing: 0px;
-  font-weight: 300;
+  font-weight: 400;
   color: #817f7f;
   font-style: italic;
   font-size: 17px;
@@ -22,4 +23,24 @@
 
 .content {
   margin-top: variables.$baseUnit;
+}
+
+
+.experiences {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$baseUnit * 1.5;
+
+  border-left: 1px solid variables.$primaryColor;
+  padding-left: variables.$baseUnit * 2;
+  margin-top: variables.$baseUnit * 2;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+
+  .dates {
+    margin-top: variables.$baseUnit * -0.5;
+  }
 }

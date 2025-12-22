@@ -27,5 +27,5 @@ $contentPadding: variables.$baseUnit * 4;
 .column {
   display: flex;
   flex-direction: column;
-  gap: variables.$baseUnit * 4;
+  gap: variables.$baseUnit * 6;
 }

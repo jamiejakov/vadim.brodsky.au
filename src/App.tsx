@@ -14,11 +14,11 @@ export const App: React.ComponentType = () => {
         <div className={styles.content}>
           <div className={styles.column}>
             <Experience />
-            <Education />
           </div>
           <div className={styles.column}>
             <Contact />
             <Volunteering />
+            <Education />
           </div>
         </div>
       </main>
