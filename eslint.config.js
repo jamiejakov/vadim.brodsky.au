@@ -13,7 +13,7 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 const packages = [];
 // including css in images as well, because it's rare enough
-const imgExtensions = ['png', 'jpg', 'jpeg', 'svg', 'css', 'scss'];
+const imgExtensions = ['png', 'jpg', 'jpeg', 'svg', 'css'];
 const fullPhrases = ['@testHelpers', '\\.\\.'];
 
 const imgExtensionRegex = `\\.(${imgExtensions.join('|')})$`;

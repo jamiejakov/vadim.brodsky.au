@@ -1,5 +1,3 @@
-import styles from './Block.module.scss';
-
 type LocationBlockProps = React.PropsWithChildren & {
   url?: string;
   title: string;
@@ -12,12 +10,10 @@ export const LocationBlock: React.ComponentType<LocationBlockProps> = (props) =>
   const titleNode = url ? <a href={url}>{title}</a> : title;
 
   return (
-    <div className={styles.block}>
-      <h3 className={styles.title}>
-        <span className={styles.mainTitle}>{titleNode}</span>
-      </h3>
+    <div>
+      <h3 className="uppercase font-semibold text-2xl mb-1">{titleNode}</h3>
       <div>{description}</div>
-      <div className={styles.experiences}>{children}</div>
+      <div className="flex flex-col gap-3 mt-4 pl-4 border-l border-primary">{children}</div>
     </div>
   );
 };
@@ -32,12 +28,12 @@ export const ExperienceBlock: React.ComponentType<ExperienceBlockProps> = (props
   const { children, title, startDate, endDate } = props;
 
   return (
-    <div className={styles.experience}>
-      <span className={styles.title}>{title}</span>
-      <span className={styles.dates}>
+    <div className="flex flex-col">
+      <span className="uppercase text-xl">{title}</span>
+      <span className="-mt-1 text-gray-500 italic">
         {startDate} - {endDate}
       </span>
-      <div className={styles.content}>{children}</div>
+      <div className="mt-2">{children}</div>
     </div>
   );
 };

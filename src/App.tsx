@@ -4,18 +4,16 @@ import { Education } from './sections/Education';
 import { Experience } from './sections/Experience';
 import { Volunteering } from './sections/Volunteering';
 
-import styles from './App.module.scss';
-
 export const App: React.ComponentType = () => {
   return (
     <>
       <Header />
-      <main className={styles.main}>
-        <div className={styles.content}>
-          <div className={styles.column}>
+      <main className="w-full flex justify-center px-8 mb-20">
+        <div className="flex flex-col gap-12 md:grid md:grid-cols-[7fr_5fr] md:gap-8 max-w-6xl">
+          <div>
             <Experience />
           </div>
-          <div className={styles.column}>
+          <div className="flex flex-col gap-12">
             <Contact />
             <Volunteering />
             <Education />

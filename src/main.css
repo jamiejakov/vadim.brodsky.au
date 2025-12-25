@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #9e1b34;
+  --font-primary: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  a {
+    @apply text-black border-b border-black hover:text-primary hover:border-primary;
+  }
+
+  p {
+    @apply mb-2;
+  }
+}
+
+@layer utilities {
+  .header-clip-path {
+    -webkit-clip-path: polygon(0 -600px, 100% -600px, 100% calc(100% - 30px), 0 100%);
+    clip-path: polygon(0 -600px, 100% -600px, 100% calc(100% - 30px), 0 100%);
+  }
+
+  .body-container {
+    -webkit-font-smoothing: antialiased;
+  }
+}
