@@ -22,7 +22,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
-    
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
 }
