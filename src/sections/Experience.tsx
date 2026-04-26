@@ -6,7 +6,7 @@ export const Experience: React.ComponentType = () => (
     <LocationBlock
       title="Canva"
       url="https://canva.com"
-      description="Empowering the world to design. Canva is an online design and publishing tool with a mission to empower everyone in the world to design anything and publish anywhere."
+      description="Canva is an online design and publishing tool with a mission to empower everyone in the world to design anything and publish anywhere."
     >
       <ExperienceBlock
         title="Principal Software Engineer (Frontend)"
